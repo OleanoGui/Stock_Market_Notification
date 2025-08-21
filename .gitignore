@@ -10,3 +10,4 @@ venv/
 Thumbs.db
 src/test_whatsapp.py
 my_stocks.txt
+src/test_email.py
