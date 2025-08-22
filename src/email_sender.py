@@ -17,8 +17,7 @@ def send_email(recipient: str, subject: str, body: str):
     msg.attach(MIMEText(body, 'plain'))
 
     try:
-        with smtplib.SMTP('smtp.office365.com', 587) as server:
-            server.starttls()
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             server.send_message(msg)
             print(f"Email sent to {recipient}")
